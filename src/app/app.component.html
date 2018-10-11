@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    <span appChangeText>Welcome to {{ title }}!</span>
+    <span appChangeText>Welcome to {{ title | uppercase }}!</span>
   </h1>
   <select (change)="changemonth($event)">
     <option *ngFor="let i of months">{{i}}</option>
@@ -16,5 +16,12 @@
   </button>
 </div>
 <h2>Content new component: </h2>
+<b>{{00.54565 | percent}}</b>
+<b>{{6589.23 | currency:"USD":true}}</b>
 <app-new-cmp></app-new-cmp>
+
+<h1>Custom Pipe</h1>
+<b>Square root of 25 is: {{25 | sqrt}}</b>
+<br/>
+<b>Square root of 729 is: {{729 | sqrt}}</b>
 
