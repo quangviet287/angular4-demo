@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NewCmpComponent } from './new-cmp/new-cmp.component';
 import { ChangeTextDirective } from './change-text.directive';
 import {SqrtPipe} from './app.sqrt';
+import { RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,16 @@ import {SqrtPipe} from './app.sqrt';
     SqrtPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      {
+        path: 'new-cmp',
+        component: NewCmpComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
